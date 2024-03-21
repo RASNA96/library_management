@@ -1,6 +1,6 @@
 ## Library Management
 
-test
+an app to manage library
 
 #### License
 
