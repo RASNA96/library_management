@@ -1,8 +1,8 @@
 app_name = "library_management"
 app_title = "Library Management"
-app_publisher = "rasna"
-app_description = "an app to manage library"
-app_email = "rasnarvindran654@gmail.com"
+app_publisher = "rasma"
+app_description = "test"
+app_email = "test@tst.com"
 app_license = "mit"
 # required_apps = []
 
