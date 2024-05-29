@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-24 10:18:35.697272",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "icon",
+  "pass",
+  "rating",
+  "sign"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "location"
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Icon",
+   "label": "icon"
+  },
+  {
+   "fieldname": "pass",
+   "fieldtype": "Password",
+   "label": "passowrd"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "rat"
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Signature",
+   "label": "sig"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-24 10:22:34.082903",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "loc",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

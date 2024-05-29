@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LT{YY}{MM}{DD}{####}",
+ "creation": "2024-03-22 23:41:36.805661",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "article_list",
+  "library_member",
+  "type",
+  "date",
+  "amended_from",
+  "delay_fine",
+  "is_damaged",
+  "damage_fine",
+  "total_fine"
+ ],
+ "fields": [
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Issue\nReturn"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Library Transaction",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date of Transaction"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Return\"",
+   "fieldname": "delay_fine",
+   "fieldtype": "Currency",
+   "label": "Delay fine"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type==\"Return\"",
+   "fieldname": "is_damaged",
+   "fieldtype": "Check",
+   "label": "is damaged?"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Return\" && doc.is_damaged",
+   "fieldname": "damage_fine",
+   "fieldtype": "Select",
+   "label": "Damage fine",
+   "options": "0\n10\n20\n30\n40\n50\n60\n70"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Return\"",
+   "fieldname": "total_fine",
+   "fieldtype": "Currency",
+   "label": "Total fine"
+  },
+  {
+   "fieldname": "article_list",
+   "fieldtype": "Table",
+   "label": "article list",
+   "options": "article list"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-24 15:28:21.178296",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Transaction",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
